@@ -1,0 +1,393 @@
+/* =========================
+   ESTILOS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #e2eefb;
+    color: #263746;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    line-height: 1.3;
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================
+   ENCABEZADO Y LOGO
+========================= */
+
+.encabezado {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 5%;
+    background-color: #123f70;
+    color: white;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marca img {
+    width: 85px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.nombre-canal h1 {
+    margin: 0;
+    color: white;
+    font-size: 23px;
+}
+
+.nombre-canal p {
+    margin: 4px 0 0;
+    color: #dceaf5;
+    font-size: 13px;
+}
+
+.encabezado-contacto {
+    justify-content: flex-start;
+}
+
+
+/* =========================
+   MENÚ DE NAVEGACIÓN
+========================= */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 20px;
+}
+
+.menu a {
+    padding: 8px 0;
+    color: white;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+}
+
+.menu a:hover,
+.menu a.activo {
+    color: #9bd5ff;
+    border-bottom-color: #9bd5ff;
+}
+
+
+/* =========================
+   CONTENIDO GENERAL
+========================= */
+
+.contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.titulo-seccion {
+    margin-bottom: 24px;
+}
+
+.titulo-seccion h2 {
+    margin: 0 0 5px;
+    color: #123f70;
+    font-size: 27px;
+}
+
+.titulo-seccion p {
+    margin: 0;
+    color: #647586;
+}
+
+
+/* =========================
+   DISTRIBUCIÓN DE TARJETAS
+========================= */
+
+.noticias,
+.internacionales,
+.noticias-internacionales,
+.deportivas,
+.videos-deportivos,
+.equipo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* =========================
+   ESTILO COMPARTIDO DE TARJETAS
+========================= */
+
+.tarjeta-noticia,
+.tarjeta-internacional,
+.tarjeta-video,
+.tarjeta-integrante {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px #17324d12;
+}
+
+.texto-noticia h3,
+.tarjeta-internacional h3,
+.tarjeta-video h3,
+.tarjeta-integrante h3 {
+    color: #123f70;
+    font-size: 19px;
+}
+
+
+/* =========================
+   NOTICIAS NACIONALES
+========================= */
+
+.tarjeta-noticia {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tarjeta-noticia img,
+.tarjeta-internacional img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.texto-noticia {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.texto-noticia h3 {
+    margin: 0 0 12px;
+}
+
+.texto-noticia p {
+    margin: 0 0 18px;
+    color: #526272;
+    font-size: 14px;
+}
+
+.boton-noticia {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 9px 14px;
+    background-color: #1769aa;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.boton-noticia:hover {
+    background-color: #0d4d80;
+}
+
+
+/* =========================
+   NOTICIAS INTERNACIONALES
+========================= */
+
+.tarjeta-internacional h3 {
+    margin: 16px 18px 8px;
+}
+
+.tarjeta-internacional a {
+    display: inline-block;
+    margin: 0 18px 18px;
+    color: #1769aa;
+}
+
+
+/* =========================
+   VIDEOS DEPORTIVOS
+========================= */
+
+.tarjeta-video iframe,
+.tarjeta-video video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+.tarjeta-video h3 {
+    margin: 16px 18px 8px;
+}
+
+.tarjeta-video p {
+    margin: 0 18px 18px;
+    color: #526272;
+    font-size: 14px;
+}
+
+
+/* =========================
+   PÁGINA CONTÁCTANOS
+========================= */
+
+.tarjeta-integrante {
+    padding: 22px;
+    text-align: center;
+}
+
+.tarjeta-integrante img {
+    width: auto;
+    max-width: 220px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.tarjeta-integrante h3 {
+    margin: 12px 0 5px;
+}
+
+.tarjeta-integrante p {
+    margin: 0;
+    color: #526272;
+    font-size: 14px;
+}
+/* PIE DE PÁGINA */
+
+.pie {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 25px;
+    padding: 22px 5%;
+    background-color: #dce5ed;
+    color: #526272;
+    font-size: 12px;
+}
+
+.pie ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pie a {
+    color: #526272;
+    font-size: 12px;
+}
+
+.pie a:hover {
+    color: #123f70;
+}
+
+.copyright {
+    margin: 0;
+}
+
+
+/* =========================
+   ACCESIBILIDAD
+========================= */
+
+a:focus-visible {
+    outline: 2px solid #1769aa;
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   TABLETAS
+========================= */
+
+@media (max-width: 850px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .noticias,
+    .internacionales,
+    .noticias-internacionales,
+    .deportivas,
+    .videos-deportivos,
+    .equipo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 560px) {
+    .encabezado {
+        padding: 18px 5%;
+    }
+
+    .marca img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nombre-canal h1 {
+        font-size: 18px;
+    }
+
+    .menu {
+        gap: 8px 15px;
+    }
+
+    .texto-banner h2 {
+        font-size: 26px;
+    }
+
+    .contenido {
+        margin: 25px auto;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 23px;
+    }
+
+    .noticias,
+    .internacionales,
+    .noticias-internacionales,
+    .deportivas,
+    .videos-deportivos,
+    .equipo {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-noticia img,
+    .tarjeta-internacional img {
+        height: 200px;
+    }
+}
