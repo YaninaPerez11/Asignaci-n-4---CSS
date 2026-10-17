@@ -30,6 +30,9 @@ img {
     max-width: 100%;
 }
 
+/* ====== 4. Enlaces: Para Internacional====== */
+.a3 { text-decoration: none; font-weight: bold; color: #b71c1c; }
+a:hover { color: #1a237e; }
 
 /* =========================
    ENCABEZADO Y LOGO
